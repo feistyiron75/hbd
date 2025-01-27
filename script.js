@@ -13,14 +13,22 @@ function showSlides() {
     setTimeout(showSlides, 3000); // Change image every 3 seconds
 }
 
-function showMessage() {
-    const messages = [
+function shoAwMessage() {
+    const quotes = [
         "You make my heart smile!",
         "Every moment with you is a treasure!",
-        "You are the love of my life!",
+        "You are the life of the party",
         "I cherish every moment with you!",
-        "Happy birthday to my favorite person!"
+        "To more life of success"
+		"Happy birthday to my favorite person!"
     ];
+	let quoteIndex = 0;
+	function showQuote() {
+    quoteIndex = (quoteIndex + 1) % quotes.length;
+    document.getElementById("quote").innerText = quotes[quoteIndex];
+}
+
+setInterval
     const randomMessage = messages[Math.floor(Math.random() * messages.length)];
     document.getElementById("message").innerText = randomMessage;
     document.getElementById("message").classList.remove("hidden");
